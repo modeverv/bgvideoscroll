@@ -9,7 +9,7 @@
     <title>新宝島</title>
   </head>
   <body>
-    <video id="music" src="music.mp4?22" autoplay></video>
+    <!--<video id="music" src="music.mp4?22" autoplay></video>-->
     <!--<iframe id="music" width="100%" height="100%" src="https://www.youtube.com/embed/LIlZCmETvsY?autoplay=1" frameborder="0"></iframe>-->
     <!--<iframe id="music" src="music.php" frameborder="0" allowtransparency="true"></iframe>-->
     <div id="main">
@@ -19,6 +19,10 @@
         <ul>
           <li><a href="shintakarajima.aif">新宝島.aif</a></li>
           <li><a href="shintakarajimaoffvo.aif">新宝島offVocal.aif</a></li>
+          <li><a href="score.pdf" target="_blank">スコア</a></li>
+          <li><a href="studio/20160312_MAXStudio01.mp3" target="_blank">20160312練習1(ダウンロードは右クリックで保存)</a></li>
+          <li><a href="studio/20160312_MAXStudio02.mp3" target="_blank">20160312練習2(ダウンロードは右クリックで保存)</a></li>
+          <li><a href="studio/20160312_MAXStudio03.mp3" target="_blank">20160312練習3(ダウンロードは右クリックで保存)</a></li>
         </ul>  
       </div>
       <pre id="kasi">
@@ -140,16 +144,14 @@ Gm7 /  F / Gm7 / Gm F /　Cm / F / Gm / A#... C
     <script>
       $(function(){
         $(window).on('load resize', function(){
-           var Y = $(window).scrollTop()
            var width = $(window).width();
            var height= $(window).height();
-           $("#music").attr("style","top:"+ Y +"px;left:0;width:"+ width + "px;"+ "height:" + height + "px;");
+           $("#music").css("width",width + "px;");
+           $("#music").css("height",height + "px;");
         });
         $(window).on('scroll', function(){
            var Y = $(window).scrollTop()
-           var width = $(window).width();
-           var height= $(window).height();
-           $("#music").attr("style","top:"+ Y +"px;left:0;width:"+ width + "px;"+ "height:" + height + "px;");
+           $("#music").css("top",Y +"px");
         });
       });
     </script>  
